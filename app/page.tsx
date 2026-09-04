@@ -59,7 +59,7 @@ export default function Home() {
             <h2>海と生きる。<br />牡蠣を育てる。</h2>
             <p className="lead">穏やかな瀬戸内の海で、<br />その日の海と向き合いながら。</p>
             <p>オイスター尾崎は、牡蠣の生産・販売を行う牡蠣漁師です。海の恵みをまっすぐに受け取り、旬のおいしさを届けることを大切にしています。</p>
-            <p className="placeholder-note">※ 詳しい産地・生産者紹介は、正式情報と写真のご用意後に掲載します。</p>
+            <p className="placeholder-note">※ 詳しい産地・生産者紹介は、正式な情報と写真がそろい次第掲載します。</p>
           </div>
           <div className="portrait-frame" data-reveal>
             <div className="portrait-image" role="img" aria-label="瀬戸内の海で漁をする牡蠣漁師のイメージ" />
