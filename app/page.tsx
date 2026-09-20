@@ -48,6 +48,7 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow light">FROM THE SETO INLAND SEA</p>
           <h1>瀬戸内の海が育てた、<br /><em>本物の牡蠣。</em></h1>
+          <small style={{ display: "block", marginTop: 12 }}>岡山・虫明から、旬の味をお届けします。</small>
           <p className="hero-copy">海と向き合い、一粒一粒を大切に。<br />オイスター尾崎から、旬の牡蠣をお届けします。</p>
         </div>
         <a className="scroll-cue" href="#about"><span>SCROLL</span><i /></a>
