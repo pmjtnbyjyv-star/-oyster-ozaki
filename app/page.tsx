@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { SITE_LINKS } from "./site-links";
 
+// Codex接続確認
 const products = [
   { name: "殻付き牡蠣", en: "SHELL OYSTERS", note: "産地からそのままの味わいを", position: "50% 50%", image: "/images/oysters-product.jpg", rakutenUrl: SITE_LINKS.rakuten.shellOysters, trackingId: "shell_oysters" },
   { name: "むき身", en: "SHUCKED OYSTERS", note: "料理に使いやすく、ぷりっと濃厚に", position: "50% 50%", image: "/images/oysters-shucked-1kg.jpg", rakutenUrl: SITE_LINKS.rakuten.shuckedOysters1kg, trackingId: "shucked_oysters_1kg" },
