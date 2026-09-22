@@ -81,13 +81,16 @@ export default function Home() {
               <article className="product-card" key={product.name} data-reveal>
                 <div className="product-image" style={{ backgroundPosition: product.position, backgroundImage: `linear-gradient(0deg,rgba(0,15,25,.36),transparent 40%),url('${product.image}')` }}>
                   <span className="product-number">0{index + 1}</span>
-                  <span className="coming">COMING SOON</span>
                 </div>
                 <div className="product-info">
                   <p>{product.en}</p><h3>{product.name}</h3><span>{product.note}</span>
-                  <a className="product-rakuten" href={product.rakutenUrl} data-track="rakuten_product_click" data-product={product.trackingId}>
-                    <span>楽天市場で購入</span><i>↗</i>
-                  </a>
+                  {product.rakutenUrl.startsWith("https://") ? (
+                    <a className="product-rakuten" href={product.rakutenUrl} data-track="rakuten_product_click" data-product={product.trackingId}>
+                      <span>楽天市場で購入</span><i>↗</i>
+                    </a>
+                  ) : (
+                    <div className="product-rakuten" style={{ pointerEvents: "none" }}><span>COMING SOON</span></div>
+                  )}
                 </div>
               </article>
             ))}
@@ -137,9 +140,15 @@ export default function Home() {
         <div className="footer-links"><a href="#instagram">Instagram</a><a href="#line">LINE</a><span>プライバシーポリシー（準備中）</span><span>特定商取引法に基づく表記（準備中）</span></div>
         <p>© OYSTER OZAKI. ALL RIGHTS RESERVED.</p>
       </footer>
-      <a className="mobile-rakuten" href={SITE_LINKS.rakuten.shop} data-track="rakuten_click" data-location="mobile_sticky">
-        <span><small>ONLINE SHOP</small>楽天市場で購入</span><i>↗</i>
-      </a>
+      {SITE_LINKS.rakuten.shop.startsWith("https://") ? (
+        <a className="mobile-rakuten" href={SITE_LINKS.rakuten.shop} data-track="rakuten_click" data-location="mobile_sticky">
+          <span><small>ONLINE SHOP</small>楽天市場で購入</span><i>↗</i>
+        </a>
+      ) : (
+        <div className="mobile-rakuten" style={{ pointerEvents: "none" }}>
+          <span><small>ONLINE SHOP</small>COMING SOON</span><i aria-hidden="true">—</i>
+        </div>
+      )}
     </main>
   );
 }
